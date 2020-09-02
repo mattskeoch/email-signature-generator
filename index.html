@@ -24,8 +24,8 @@
                     <p>
                         Scroll down to get started
                     </p>
-                    <lottie-player src="/lottie.json"
-                        background="transparent" speed="1" style="width: 40px; height: 40px;" loop autoplay>
+                    <lottie-player src="/lottie.json" background="transparent" speed="1"
+                        style="width: 40px; height: 40px;" loop autoplay>
                     </lottie-player>
                 </div>
             </div>
@@ -45,17 +45,18 @@
                         <input tabindex="2" v-model="title" placeholder="Owner" type="text" />
                         <label>Studio Name</label>
                         <input tabindex="6" v-model="studio" placeholder="Tribe Sydney" type="text" />
-                        <label>Studio URL</label>
-                        <input tabindex="6" v-model="website" placeholder="https://www.tribeft.com.au/studio/name/"
-                            type="url" />
+
                     </div>
                     <div class="col-right">
                         <label>Phone Number</label>
                         <input tabindex="3" v-model="telephone" placeholder="1300 878 991" type="tel" />
                         <label>Email Address</label>
                         <input tabindex="4" v-model="email" placeholder="email@tribeft.com.au" type="email" />
-                        <label>Studio Address</label>
-                        <input tabindex="5" v-model="address" placeholder="132 Evergreen St, Sydney" type="text" />
+                        <label>Studio URL</label>
+                        <input tabindex="6" v-model="website" placeholder="https://www.tribeft.com.au/studio/name/"
+                            type="url" />
+                        <!-- <label>Studio Address</label>
+                        <input tabindex="5" v-model="address" placeholder="132 Evergreen St, Sydney" type="text" /> -->
                 </form>
             </div>
         </div>
@@ -95,10 +96,7 @@
                                                         <span>{{ name || "Jane Doe" }}</span></h3>
                                                     <p color="#3e3e3e" font-size="medium"
                                                         style="margin: 0px; font-weight: 500; color: rgb(62, 62, 62); font-size: 14px; line-height: 22px;">
-                                                        <span>{{ title || "Owner" }}</span></p>
-                                                    <p color="#3e3e3e" font-size="medium"
-                                                        style="margin: 0px; font-weight: 500; color: rgb(62, 62, 62); font-size: 14px; line-height: 22px;">
-                                                        <span>{{ studio || "Tribe Sydney" }}</span></p>
+                                                        <span>{{ title || "Owner & Trainer" }}</span></p>
                                                 </td>
 
                                                 <td width="30">
@@ -167,29 +165,7 @@
                                                                                 <td style="vertical-align: bottom;">
                                                                                     <span color="#48B57B" width="11"
                                                                                         style="display: block; background-color: rgb(72, 181, 123);"><img
-                                                                                            src="/images/email-icon-2x.png"
-                                                                                            color="#48B57B" width="13"
-                                                                                            style="display: block; background-color: rgb(72, 181, 123);"></span>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                                <td style="padding: 0px;"><a :href="website"
-                                                                        color="#3e3e3e"
-                                                                        style="text-decoration: none; color: rgb(62, 62, 62); font-size: 12px;"><span>{{ website || "www.tribeft.com.au/tribestudio" }}</span></a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr height="25" style="vertical-align: middle;">
-                                                                <td width="30" style="vertical-align: middle;">
-                                                                    <table cellpadding="0" cellspacing="0"
-                                                                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Tahoma;">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td style="vertical-align: bottom;">
-                                                                                    <span color="#48B57B" width="11"
-                                                                                        style="display: block; background-color: rgb(72, 181, 123);"><img
-                                                                                            src="/images/link-icon-2x.png"
+                                                                                            src="/images/address-icon-2x.png"
                                                                                             color="#48B57B" width="13"
                                                                                             style="display: block; background-color: rgb(72, 181, 123);"></span>
                                                                                 </td>
@@ -198,7 +174,8 @@
                                                                     </table>
                                                                 </td>
                                                                 <td style="padding: 0px;"><span color="#3e3e3e"
-                                                                        style="font-size: 12px; color: rgb(62, 62, 62);"><span>{{ address || "132 Evergreen St, Sydney" }}</span></span>
+                                                                        style="font-size: 12px; color: rgb(62, 62, 62);"><a
+                                                                            :href="website"><span>{{ studio || "Tribe Sydney" }}</span></a></span>
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -248,7 +225,7 @@
             </div>
         </div>
     </div>
-    
+
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
