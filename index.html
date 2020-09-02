@@ -3,13 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1024">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="stylesheet" href="/dist/css/style.min.css">
     <title>Tribe Email Signature Generator</title>
 </head>
 
 <body>
+    <div class="not-desktop">
+        <h2>🤡Please Visit Our Desktop Website To Use The Tribe Email Signature Generator.🤡</h2>
+    </div>
+    <div class="desktop">
     <div id="app">
         <div class="hero">
             <div class="logo">
@@ -98,7 +102,6 @@
                                                         style="margin: 0px; font-weight: 500; color: rgb(62, 62, 62); font-size: 14px; line-height: 22px;">
                                                         <span>{{ title || "Owner & Trainer" }}</span></p>
                                                 </td>
-
                                                 <td width="30">
                                                     <div style="width: 30px;"></div>
                                                 </td>
@@ -225,7 +228,7 @@
             </div>
         </div>
     </div>
-
+</div>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>

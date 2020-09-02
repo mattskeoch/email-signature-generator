@@ -1,0 +1,25 @@
+.not-desktop {
+display: flex;
+justify-content: center;
+align-items: center;
+padding-left: 20px;
+padding-right: 20px;
+
+    @media screen and (max-width: 70rem) {
+        height: 100vh;
+        background-color: rgb(198, 246, 213)
+    }
+
+    @media screen and (min-width: 70rem) {
+        display: none;
+    }    
+    
+}
+
+
+
+#app {
+    @media screen and (max-width: 70rem) {
+        display: none;
+    }
+}
