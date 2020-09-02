@@ -1,0 +1,188 @@
+.hero {
+    display: flex;
+    flex-direction: row;
+    height: 65vh;
+    background-color: $lightGreen;
+    padding: 50px 50px;
+
+    .logo {
+        position: absolute;
+        top: 20px;
+        left: 10px;
+
+        img {
+            width: 50%;
+        }
+    }
+}
+
+.hero__copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding-left: 100px;
+
+    h1 {
+        color: $heading;
+        font-size: 3.5rem;
+        padding-bottom: 20px;
+    }
+
+    p {
+        color: $paragraph;
+        font-size: 1.4rem;
+        line-height: 1.2em;
+    }
+
+    .hero__copy-action {
+        display: flex;
+        align-content: center;
+        height: 30px;
+        margin-top: 20px;
+
+        p {
+            font-size: 1.2rem;
+            margin-top: 8px;
+        }
+
+    }
+}
+
+.hero__img {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin-left: 100px;
+    overflow: hidden;
+
+    .img1 {
+        width: 90%;
+    }
+
+    .img2 {
+        width: 50%;
+        position: relative;
+        top: 40px;
+        right: 265px;
+        z-index: 2;
+    }
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.main__input {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        margin-bottom: 13px;
+    }
+
+    form {
+        display: flex;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+
+    }
+
+    form input[type=text],
+    form input[type=tel],
+    form input[type=email],
+    form input[type=url] {
+        border: 1px solid $input;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #606266;
+    }
+
+    form input[type=text]:focus,
+    form input[type=tel]:focus,
+    form input[type=email]:focus,
+    form input[type=url]:focus {
+        outline: none;
+        border-color: $darkGreen;
+    }
+}
+
+
+.main__output {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+        margin-bottom: 13px;
+    }
+
+    .signature_preview {
+        background-color: $white;
+        width: 700px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        padding: 20px;
+    }
+
+    .line {
+        height: 10px;
+        background-color: $line;
+        margin: 5px 0;
+        border-radius: 2px;
+        margin-left: 5px;
+    }
+
+    .long {
+        width: 90%
+    }
+
+    .short {
+        width: 50%;
+    }
+
+    .shorter {
+        width: 30%;
+    }
+}
+
+.output__copy {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 20px;
+
+    button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: $darkGreen;
+        color: $white;
+        cursor: pointer;
+
+        &:hover {
+
+            background-color: $green;
+        }
+
+        &:focus {
+            border-color: $darkGreen;
+
+        }
+    }
+
+    a {
+        color: $darkGreen;
+        text-decoration: underline;
+
+        &:hover {
+            color: $green;
+        }
+    }
+}

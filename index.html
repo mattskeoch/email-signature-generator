@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+   
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="/dist/css/style.min.css">
+
+    <title>Tribe Email Signature Generator</title>
+</head>
+
+<body>
+    <div id="app">
+
+
+
+        <div class="hero">
+            <div class="logo">
+                <a href="https://www.tribeft.com.au/"><img src="/images/logo-dark.png" alt=""></a>
+            </div>
+            <div class="hero__copy">
+                <h1>Tribe Email Signature Generator</h1>
+                <p>Create your professional looking Tribe email signature in seconds without
+                    typing any code or using any grahpics editor!
+                </p>
+                <div class="hero__copy-action">
+                    <p>
+                        Scroll down to get started
+                    </p>
+                    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_q6L1zx.json"
+                        background="transparent" speed="1" style="width: 40px; height: 40px;" loop autoplay>
+                    </lottie-player>
+                </div>
+
+            </div>
+            <div class="hero__img">
+                <img src="/images/main-pic-3.png" alt="" srcset="" class="img1">
+                <img src="/images/main-pic-2.png" alt="" srcset="" class="img2 hover">
+            </div>
+        </div>
+
+
+        <div class="main tb-margin-reg">
+            <!-- USER INPUT -->
+            <div class="main__input">
+                <h2>Enter Your Signature Details</h2>
+
+                <form>
+                    <div class="col-left">
+                        <label>First and Last Name</label>
+                        <input tabindex="1" v-model="name" placeholder="Jane Doe" autocomplete="new-name" type="text" />
+                        <label>Job Title</label>
+                        <input tabindex="2" v-model="title" placeholder="Owner" autocomplete="new-title" type="text" />
+                        <label>Studio Name</label>
+                        <input tabindex="6" v-model="studio" placeholder="Tribe Sydney" autocomplete="new-studio"
+                            type="text" />
+                        <label>Studio URL</label>
+                        <input tabindex="6" v-model="website" placeholder="https://www.tribeft.com.au/studio/name/"
+                            autocomplete="new-website" type="url" />
+                    </div>
+                    <div class="col-right">
+                        <label>Phone Number</label>
+                        <input tabindex="3" v-model="telephone" placeholder="1300 878 991" autocomplete="new-phone"
+                            type="tel" />
+                        <label>Email Address</label>
+                        <input tabindex="4" v-model="email" placeholder="email@tribeft.com.au" autocomplete="new-email" type="email" />
+                        <label>Studio Address</label>
+                        <input tabindex="5" v-model="address" placeholder="132 Evergreen St, Sydney" autocomplete="new-address"
+                            type="text" />
+                </form>
+            </div>
+        </div>
+
+        <!-- USER INPUT -->
+
+
+        <!-- SIGNATURE OUTPUT -->
+        <div class="main__output">
+            <h2>Preview</h2>
+            <div class="signature_preview">
+                <div class="line shorter" style="margin-bottom: 20px;"></div>
+                <div class="line long"></div>
+                <div class="line short"></div>
+                <div class="line long"></div>
+                <div class="line short b-margin-xsm"></div>
+                <div class="line short"></div>
+                <div class="line short"></div>
+                <div class="line long"></div>
+                <div class="line short"></div>
+                <div class="line short"></div>
+                <div class="line long"></div>
+                <div class="line long" style="margin-bottom: 30px;"></div>
+                <div ref="sourceWrapper" id="source">
+                    <table cellpadding="0" cellspacing="0"
+                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Tahoma;">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table cellpadding="0" cellspacing="0"
+                                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Tahoma;">
+                                        <tbody>
+                                            <tr>
+                                                <td width="150" style="vertical-align: middle;"><span
+                                                        style="margin-right: 20px; display: block;"><img
+                                                            src="https://y3c1srzjq8-flywheel.netdna-ssl.com/wp-content/uploads/2019/01/logo-dark.png"
+                                                            role="presentation" width="130"
+                                                            style="max-width: 130px;"></span></td>
+                                                <td style="vertical-align: middle;">
+                                                    <h3 color="#3e3e3e"
+                                                        style="margin: 0px; font-size: 18px; color: rgb(62, 62, 62);">
+                                                        <span>{{ name || "Jane Doe" }}</span></h3>
+                                                    <p color="#3e3e3e" font-size="medium"
+                                                        style="margin: 0px; font-weight: 500; color: rgb(62, 62, 62); font-size: 14px; line-height: 22px;">
+                                                        <span>{{ title || "Owner" }}</span></p>
+                                                    <p color="#3e3e3e" font-size="medium"
+                                                        style="margin: 0px; font-weight: 500; color: rgb(62, 62, 62); font-size: 14px; line-height: 22px;">
+                                                        <span>{{ studio || "Tribe Sydney" }}</span></p>
+                                                </td>
+
+                                                <td width="30">
+                                                    <div style="width: 30px;"></div>
+                                                </td>
+                                                <td color="#48B57B" direction="vertical" width="1"
+                                                    style="width: 1px; border-bottom: none; border-left: 1px solid rgb(72, 181, 123);">
+                                                </td>
+                                                <td width="30">
+                                                    <div style="width: 30px;"></div>
+                                                </td>
+                                                <td style="vertical-align: middle;">
+                                                    <table cellpadding="0" cellspacing="0"
+                                                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Tahoma;">
+                                                        <tbody>
+                                                            <tr height="25" style="vertical-align: middle;">
+                                                                <td width="30" style="vertical-align: middle;">
+                                                                    <table cellpadding="0" cellspacing="0"
+                                                                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Tahoma;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="vertical-align: bottom;">
+                                                                                    <span color="#48B57B" width="11"
+                                                                                        style="display: block; background-color: rgb(72, 181, 123);"><img
+                                                                                            src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/phone-icon-2x.png"
+                                                                                            color="#48B57B" width="13"
+                                                                                            style="display: block; background-color: rgb(72, 181, 123);"></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td style="padding: 0px; color: rgb(62, 62, 62);">
+                                                                    <a :href="'tel:' + telephone" color="#3e3e3e"
+                                                                        style="text-decoration: none; color: rgb(62, 62, 62); font-size: 12px;"><span>{{ telephone || "1300 878 991" }}</span></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr height="25" style="vertical-align: middle;">
+                                                                <td width="30" style="vertical-align: middle;">
+                                                                    <table cellpadding="0" cellspacing="0"
+                                                                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Tahoma;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="vertical-align: bottom;">
+                                                                                    <span color="#48B57B" width="11"
+                                                                                        style="display: block; background-color: rgb(72, 181, 123);"><img
+                                                                                            src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/email-icon-2x.png"
+                                                                                            color="#48B57B" width="13"
+                                                                                            style="display: block; background-color: rgb(72, 181, 123);"></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td style="padding: 0px;"><a :href="'mailto:' + email"
+                                                                        color="#3e3e3e"
+                                                                        style="text-decoration: none; color: rgb(62, 62, 62); font-size: 12px;"><span>{{ email || "email@tribeft.com.au" }}</span></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr height="25" style="vertical-align: middle;">
+                                                                <td width="30" style="vertical-align: middle;">
+                                                                    <table cellpadding="0" cellspacing="0"
+                                                                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Tahoma;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="vertical-align: bottom;">
+                                                                                    <span color="#48B57B" width="11"
+                                                                                        style="display: block; background-color: rgb(72, 181, 123);"><img
+                                                                                            src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/link-icon-2x.png"
+                                                                                            color="#48B57B" width="13"
+                                                                                            style="display: block; background-color: rgb(72, 181, 123);"></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td style="padding: 0px;"><a :href="website"
+                                                                        color="#3e3e3e"
+                                                                        style="text-decoration: none; color: rgb(62, 62, 62); font-size: 12px;"><span>{{ website || "www.tribeft.com.au/tribestudio" }}</span></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr height="25" style="vertical-align: middle;">
+                                                                <td width="30" style="vertical-align: middle;">
+                                                                    <table cellpadding="0" cellspacing="0"
+                                                                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Tahoma;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="vertical-align: bottom;">
+                                                                                    <span color="#48B57B" width="11"
+                                                                                        style="display: block; background-color: rgb(72, 181, 123);"><img
+                                                                                            src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/address-icon-2x.png"
+                                                                                            color="#48B57B" width="13"
+                                                                                            style="display: block; background-color: rgb(72, 181, 123);"></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td style="padding: 0px;"><span color="#3e3e3e"
+                                                                        style="font-size: 12px; color: rgb(62, 62, 62);"><span>{{ address || "132 Evergreen St, Sydney" }}</span></span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- SIGNATURE OUTPUT -->
+            <div class="output__copy">
+                <div class="output__copy-btn"><button ref="copy" class="js-copy" data-clipboard-target="#source">
+                        <span>Copy Signature</span>
+                        <!-- <span class="feedback__text">Copied!</span> -->
+                    </button>
+                    <button ref="copySrc" class="js-copy-src">
+                        <span>Copy Signature HTML</span>
+                        <!-- <span class="feedback__text">Copied!</span> -->
+                    </button>
+                </div>
+               <a href="#howTo">How To Install</a>
+
+            </div>
+            <!-- SIGNATURE OUTPUT -->
+        </div>
+    </div>
+
+
+    <!-- HOW TO POPUP -->
+    <div id="howTo" class="overlay">
+        <div class="popup">
+            <h2>How to Install</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <ol class="list">
+                    <li>1. Click the <strong>Copy Signature</strong> button.</li>
+                    <li>2. Open <strong>Outlook</strong>, go to <strong>Options</strong> > <strong>Mail</strong> and click on <strong>Signatures</strong>.</li>
+                    <li>3. Click <strong>New</strong> to create a new placeholder signature.</li>
+                    <li>4. Paste <kbd>Ctrl + V</kbd> your signature into the <strong>Edit signature</strong> section.</li>
+                    <li>5. Click <strong>OK</strong> to save.</li>
+                </ol>               
+            </div>
+        </div>
+    </div>
+    <!-- HOW TO POPUP -->
+    
+
+
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/app/js/app.js"></script>
+</body>
+
+</html>

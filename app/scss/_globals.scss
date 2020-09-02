@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    line-height: 1;
+    color: $heading;
+}
+
+body {
+    height: 100%;
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+    background-color: $bgMain;
+
+}
+
+p {
+    line-height: 0;
+    color: $paragraph;
+}
+
+
+ul {
+    list-style: none;
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+form {
+    margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+}
+
+button,
+input {
+    line-height: normal;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Blur images when they have no alt attribute */
+// img:not([alt]) {
+//     filter: blur(10px);
+// }
+
+/* Hide element while making it readable for screen readers */
+.hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Spacing Utility */
+.t-margin-reg {
+    margin-top: 120px;
+}
+
+.t-margin-sm {
+    margin-top: 60px;
+}
+
+.b-margin-reg {
+    margin-bottom: 120px;
+}
+
+.b-margin-sm {
+    margin-bottom: 60px;
+}
+
+.tb-margin-reg {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.tb-margin-sm {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+/* Hover Animation */
+@keyframes hover {
+    50% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(-6px);
+    }
+}
+
+.hover {
+    display: inline-block;
+    transform: translateY(-6px);
+    animation-name: hover;
+    animation-duration: 2s;
+    animation-delay: 300ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
