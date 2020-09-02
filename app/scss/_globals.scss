@@ -76,10 +76,10 @@ picture {
     display: block;
 }
 
-/* Blur images when they have no alt attribute */
-// img:not([alt]) {
-//     filter: blur(10px);
-// }
+/*Blur images when they have no alt attribute */
+img:not([alt]) {
+    filter: blur(10px);
+}
 
 /* Hide element while making it readable for screen readers */
 .hidden {
@@ -149,5 +149,3 @@ picture {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-
-

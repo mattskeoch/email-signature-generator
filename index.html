@@ -4,18 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1024">
-   
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="stylesheet" href="/dist/css/style.min.css">
-
     <title>Tribe Email Signature Generator</title>
 </head>
 
 <body>
     <div id="app">
-
-
-
         <div class="hero">
             <div class="logo">
                 <a href="https://www.tribeft.com.au/"><img src="/images/logo-dark.png" alt=""></a>
@@ -33,50 +28,37 @@
                         background="transparent" speed="1" style="width: 40px; height: 40px;" loop autoplay>
                     </lottie-player>
                 </div>
-
             </div>
             <div class="hero__img">
                 <img src="/images/main-pic-3.png" alt="" srcset="" class="img1">
                 <img src="/images/main-pic-2.png" alt="" srcset="" class="img2 hover">
             </div>
         </div>
-
-
         <div class="main tb-margin-reg">
-            <!-- USER INPUT -->
             <div class="main__input">
                 <h2>Enter Your Signature Details</h2>
-
                 <form>
                     <div class="col-left">
                         <label>First and Last Name</label>
-                        <input tabindex="1" v-model="name" placeholder="Jane Doe" autocomplete="new-name" type="text" />
+                        <input tabindex="1" v-model="name" placeholder="Jane Doe" type="text" />
                         <label>Job Title</label>
-                        <input tabindex="2" v-model="title" placeholder="Owner" autocomplete="new-title" type="text" />
+                        <input tabindex="2" v-model="title" placeholder="Owner" type="text" />
                         <label>Studio Name</label>
-                        <input tabindex="6" v-model="studio" placeholder="Tribe Sydney" autocomplete="new-studio"
-                            type="text" />
+                        <input tabindex="6" v-model="studio" placeholder="Tribe Sydney" type="text" />
                         <label>Studio URL</label>
                         <input tabindex="6" v-model="website" placeholder="https://www.tribeft.com.au/studio/name/"
-                            autocomplete="new-website" type="url" />
+                            type="url" />
                     </div>
                     <div class="col-right">
                         <label>Phone Number</label>
-                        <input tabindex="3" v-model="telephone" placeholder="1300 878 991" autocomplete="new-phone"
-                            type="tel" />
+                        <input tabindex="3" v-model="telephone" placeholder="1300 878 991" type="tel" />
                         <label>Email Address</label>
-                        <input tabindex="4" v-model="email" placeholder="email@tribeft.com.au" autocomplete="new-email" type="email" />
+                        <input tabindex="4" v-model="email" placeholder="email@tribeft.com.au" type="email" />
                         <label>Studio Address</label>
-                        <input tabindex="5" v-model="address" placeholder="132 Evergreen St, Sydney" autocomplete="new-address"
-                            type="text" />
+                        <input tabindex="5" v-model="address" placeholder="132 Evergreen St, Sydney" type="text" />
                 </form>
             </div>
         </div>
-
-        <!-- USER INPUT -->
-
-
-        <!-- SIGNATURE OUTPUT -->
         <div class="main__output">
             <h2>Preview</h2>
             <div class="signature_preview">
@@ -237,26 +219,18 @@
                     </table>
                 </div>
             </div>
-            <!-- SIGNATURE OUTPUT -->
             <div class="output__copy">
                 <div class="output__copy-btn"><button ref="copy" class="js-copy" data-clipboard-target="#source">
                         <span>Copy Signature</span>
-                        <!-- <span class="feedback__text">Copied!</span> -->
                     </button>
                     <button ref="copySrc" class="js-copy-src">
                         <span>Copy Signature HTML</span>
-                        <!-- <span class="feedback__text">Copied!</span> -->
                     </button>
                 </div>
-               <a href="#howTo">How To Install</a>
-
+                <a href="#howTo">How To Install</a>
             </div>
-            <!-- SIGNATURE OUTPUT -->
         </div>
     </div>
-
-
-    <!-- HOW TO POPUP -->
     <div id="howTo" class="overlay">
         <div class="popup">
             <h2>How to Install</h2>
@@ -264,22 +238,21 @@
             <div class="content">
                 <ol class="list">
                     <li>1. Click the <strong>Copy Signature</strong> button.</li>
-                    <li>2. Open <strong>Outlook</strong>, go to <strong>Options</strong> > <strong>Mail</strong> and click on <strong>Signatures</strong>.</li>
+                    <li>2. Open <strong>Outlook</strong>, go to <strong>Options</strong> > <strong>Mail</strong> and
+                        click on <strong>Signatures</strong>.</li>
                     <li>3. Click <strong>New</strong> to create a new placeholder signature.</li>
-                    <li>4. Paste <kbd>Ctrl + V</kbd> your signature into the <strong>Edit signature</strong> section.</li>
+                    <li>4. Paste <kbd>Ctrl + V</kbd> your signature into the <strong>Edit signature</strong> section.
+                    </li>
                     <li>5. Click <strong>OK</strong> to save.</li>
-                </ol>               
+                </ol>
             </div>
         </div>
     </div>
     <!-- HOW TO POPUP -->
-    
-
-
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="/app/js/app.js"></script>
 </body>
 
