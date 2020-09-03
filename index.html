@@ -18,7 +18,7 @@
         <div id="app">
             <div class="hero">
                 <div class="logo">
-                    <a href="https://www.tribeft.com.au/"><img src="/images/logo-dark.png" alt=""></a>
+                    <a href="https://www.tribeft.com.au/"><img src="/images/logo-dark.png" alt="Tribe Logo"></a>
                 </div>
                 <div class="hero__copy">
                     <h1>Tribe Email Signature Generator</h1>
@@ -44,21 +44,23 @@
                     <h2>Enter Your Signature Details</h2>
                     <form>
                         <div class="col-left">
-                            <label>First and Last Name</label>
-                            <input tabindex="1" v-model="name" placeholder="Jane Doe" type="text" />
-                            <label>Job Title</label>
+                            <label for="name">First and Last Name</label>
+                            <input tabindex="1" v-model="name" placeholder="Jane Doe" type="text" id="name" />
+                            <label for="title">Job Title</label>
                             <input tabindex="2" v-model="title" placeholder="Owner" type="text" />
                             <label>Studio URL</label>
                             <input tabindex="6" v-model="website" placeholder="https://www.tribeft.com.au/studio/name/"
-                                type="url" />
+                                type="url" id="title" />
                         </div>
                         <div class="col-right">
-                            <label>Studio Name</label>
-                            <input tabindex="6" v-model="studio" placeholder="Tribe Sydney" type="text" />
-                            <label>Email Address</label>
-                            <input tabindex="4" v-model="email" placeholder="email@tribeft.com.au" type="email" />
-                            <label>Phone Number</label>
-                            <input tabindex="3" v-model="telephone" placeholder="1300 878 991" type="tel" />
+                            <label for="studio">Studio Name</label>
+                            <input tabindex="6" v-model="studio" placeholder="Tribe Sydney" type="text" id="studio" />
+                            <label for="email">Email Address</label>
+                            <input tabindex="4" v-model="email" placeholder="email@tribeft.com.au" type="email"
+                                alt="email" />
+                            <label for="telephone">Phone Number</label>
+                            <input tabindex="3" v-model="telephone" placeholder="1300 878 991" type="tel"
+                                id="telephone" />
                     </form>
                 </div>
             </div>
@@ -123,6 +125,7 @@
                                                                                         <span color="#48B57B" width="11"
                                                                                             style="display: block; background-color: rgb(72, 181, 123);"><img
                                                                                                 src="/images/address-icon-2x.png"
+                                                                                                alt="address icon"
                                                                                                 color="#48B57B"
                                                                                                 width="13"
                                                                                                 style="display: block; background-color: rgb(72, 181, 123);"></span>
@@ -134,7 +137,8 @@
 
                                                                     <td style="padding: 0px;"><span color="#3e3e3e"
                                                                             style="font-size: 12px; color: rgb(62, 62, 62);"><a
-                                                                                :href="website" style="color: rgb(62, 62, 62);">{{ studio || "Tribe Sydney" }}</a></span>
+                                                                                :href="website"
+                                                                                style="color: rgb(62, 62, 62);">{{ studio || "Tribe Sydney" }}</a></span>
                                                                     </td>
                                                                 </tr>
                                                                 <tr height="25" style="vertical-align: middle;">
@@ -147,6 +151,7 @@
                                                                                         <span color="#48B57B" width="11"
                                                                                             style="display: block; background-color: rgb(72, 181, 123);"><img
                                                                                                 src="/images/email-icon-2x.png"
+                                                                                                alt="email icon"
                                                                                                 color="#48B57B"
                                                                                                 width="13"
                                                                                                 style="display: block; background-color: rgb(72, 181, 123);"></span>
@@ -170,6 +175,7 @@
                                                                                         <span color="#48B57B" width="11"
                                                                                             style="display: block; background-color: rgb(72, 181, 123);"><img
                                                                                                 src="/images/phone-icon-2x.png"
+                                                                                                alt="phone icon"
                                                                                                 color="#48B57B"
                                                                                                 width="13"
                                                                                                 style="display: block; background-color: rgb(72, 181, 123);"></span>
@@ -231,7 +237,7 @@
                     </ol>
                     <h2>How to add my new signature to Outlook Online</h2>
                     <ol class="list">
-                        <li>1. <a target="_blank" href="https://www.office.com/">Sign in to Outlook online</a>.</li>
+                        <li>1. <a target="_blank" href="https://www.office.com/" rel="noreferrer" >Sign in to Outlook online</a>.</li>
                         <li>2. Go to <strong>Settings</strong> > <strong>View all Outlook settings</strong> >
                             <strong>Compose and reply.</strong>
                         <li>3. Under <strong>Email signature</strong>, paste <kbd>Ctrl + V</kbd>.</li>
