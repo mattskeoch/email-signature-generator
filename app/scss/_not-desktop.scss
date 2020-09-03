@@ -1,9 +1,11 @@
 .not-desktop {
-display: flex;
-justify-content: center;
-align-items: center;
-padding-left: 20px;
-padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
 
     @media screen and (max-width: 70rem) {
         height: 100vh;
@@ -12,11 +14,13 @@ padding-right: 20px;
 
     @media screen and (min-width: 70rem) {
         display: none;
-    }    
-    
+    }
+
+    img.not-desktop__logo {
+        width: 40%;
+        margin-top: 60px;
+    }
 }
-
-
 
 #app {
     @media screen and (max-width: 70rem) {

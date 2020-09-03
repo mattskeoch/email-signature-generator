@@ -13,7 +13,6 @@ window.box = new Vue({
             studio: ""
         };
     },
-
     computed: {
         tel1: function tel1() {
             return "tel:" + this.telephone.replace(/ /g, "").replace(/\D/g, "");
@@ -27,12 +26,6 @@ window.box = new Vue({
             text: function text() {
                 return _this.$refs.sourceWrapper.innerHTML;
             }
-        });
-        signatureClipboard.on("success", function (e) {
-            feedback("copy");
-        });
-        signatureHTMLClipboard.on("success", function (e) {
-            feedback("copySrc");
         });
     }
 });
