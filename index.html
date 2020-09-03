@@ -45,21 +45,21 @@
                     <form>
                         <div class="col-left">
                             <label for="name">First and Last Name</label>
-                            <input tabindex="1" v-model="name" placeholder="Jane Doe" type="text" id="name" />
+                            <input v-model="name" placeholder="Jane Doe" type="text" id="name" />
                             <label for="title">Job Title</label>
-                            <input tabindex="2" v-model="title" placeholder="Owner" type="text" />
-                            <label>Studio URL</label>
-                            <input tabindex="6" v-model="website" placeholder="https://www.tribeft.com.au/studio/name/"
-                                type="url" id="title" />
+                            <input v-model="title" placeholder="Owner" type="text" id="title" />
+                            <label for="website">Studio URL</label>
+                            <input v-model="website" placeholder="https://www.tribeft.com.au/studio/name/"
+                                type="url" id="website" />
                         </div>
                         <div class="col-right">
                             <label for="studio">Studio Name</label>
-                            <input tabindex="6" v-model="studio" placeholder="Tribe Sydney" type="text" id="studio" />
+                            <input v-model="studio" placeholder="Tribe Sydney" type="text" id="studio" />
                             <label for="email">Email Address</label>
-                            <input tabindex="4" v-model="email" placeholder="email@tribeft.com.au" type="email"
+                            <input v-model="email" placeholder="email@tribeft.com.au" type="email"
                                 alt="email" />
                             <label for="telephone">Phone Number</label>
-                            <input tabindex="3" v-model="telephone" placeholder="1300 878 991" type="tel"
+                            <input v-model="telephone" placeholder="1300 878 991" type="tel"
                                 id="telephone" />
                     </form>
                 </div>
